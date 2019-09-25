@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%block content%}
+<section class="team">
+<h2 class="is-size-3 has-text-centered is-block">Meet our team</h2>
+<div class="columns is-multiline">
+
+{% for member in members %}
+	<div class="column is-one-third">
+	<div class="card">
+  <div class="card-image">
+    <figure class="image is-5by4">
+      <img src="{{ member.image_url }}" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{ member.full_name }}</p>
+        <p class="subtitle is-6">{{ member.position }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+
+
+{% endfor %}
+	</div>
+	</section>
+{%endblock%}
