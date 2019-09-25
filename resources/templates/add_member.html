@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+<form action="/team/add" method="POST">
+	{{ csrf_field }}
+
+	<input class="input" type="text" placeholder="Full Name and Rank" name="full_name">
+	<input class="input" type="tel" placeholder="Position" name="position">
+	<input class="input" type="text" placeholder="Image URL" name="image_url">
+	<input type="submit" value="Create">
+</form>
+</section>
+{% endblock %}
