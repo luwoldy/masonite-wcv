@@ -3,7 +3,9 @@
 from masonite.view import View
 from masonite.request import Request
 from masonite.controllers import Controller
-
+from app.notifications.VolunteerNotification import VolunteerNotification
+from notifications import Notify
+from masonite.helpers import compact
 
 class PageController(Controller):
     """Controller For Welcoming The User."""
@@ -31,3 +33,25 @@ class PageController(Controller):
             masonite.view.View -- The Masonite view class.
         """
         return view.render('ethiopia')
+
+    def volunteer(self, view: View):
+        """Show the welcome page.
+
+        Arguments:
+            view {masonite.view.View} -- The Masonite view class.
+            request {masonite.request.Request} -- The Masonite request class.
+
+        Returns:
+            masonite.view.View -- The Masonite view class.
+        """
+        return view.render('volunteer')
+
+    def add_volunteer(self, notify: Notify,view: View, request: Request):
+        team_member = request.input('full_name')
+        notify.mail(VolunteerNotification, to='leul.woldeab@gmail.com', name=team_member)
+        return view.render('form_success',compact(team_member))
+
+    def donate(self, view: View):
+        return view.render('donate')
+
+

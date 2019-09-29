@@ -12,6 +12,7 @@ class CreateMembersTable(Migration):
             table.char('full_name',50)
             table.char('position',255)
             table.char('image_url',255)
+            table.char('company', 60)
             table.timestamps()
 
     def down(self):

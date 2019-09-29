@@ -1,6 +1,7 @@
 """Mail Settings."""
 
 from masonite import env
+import os
 
 """From Address
 This value will be used for the default address when sending emails from
@@ -19,7 +20,7 @@ additional drivers as you need or pip install additional drivers.
 Supported: 'smtp', 'mailgun'
 """
 
-DRIVER = env('MAIL_DRIVER', 'smtp')
+DRIVER = 'mailgun'
 
 """Mail Drivers
 Different drivers you can use for sending email.
@@ -31,9 +32,10 @@ DRIVERS = {
         'port': env('MAIL_PORT', '465'),
         'username': env('MAIL_USERNAME', 'username'),
         'password': env('MAIL_PASSWORD', 'password'),
+        'ssl': True
     },
     'mailgun': {
-        'secret': env('MAILGUN_SECRET', 'key-XX'),
-        'domain': env('MAILGUN_DOMAIN', 'sandboxXX.mailgun.org')
+        'secret': os.getenv('MAILGUN_SECRET', 'key-XX'),
+        'domain': os.getenv('MAILGUN_DOMAIN', 'sandboxXX.mailgun.org')
     }
 }
