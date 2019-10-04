@@ -30,7 +30,8 @@ class MemberController(Controller):
         id = Member.insert_get_id({
             'full_name': team_member,
             'position': request.input('position'),
-            'image_url': upload.driver('disk').store(request.input('file_upload'), filename=f"{team_member}"),
+            'image_url': upload.driver('disk').store(request.input('file_upload')),
+            'company': request.input('company')
         })
         return view.render('form_success', compact(team_member))
 

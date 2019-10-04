@@ -6,14 +6,12 @@
     <title>World Cardiac Vision | </title>
     <!-- Don't forget to add your metadata here -->
     <link rel="stylesheet" href="/public/css/bulma.css">
-    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<script src="/public/js/app.js"></script>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="uploads/logo.png">
+      <img src="{{config('application').url}}/public/images/logo.png">
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -33,18 +31,21 @@
       <a class="navbar-item is-primary" href="/team">
         Team
       </a>
-        <a class="navbar-link is-primary" href="/ethiopia">
-          Ethiopia 2019
-        </a>
+
+      <a class="navbar-item is-primary" href="/ethiopia">
+        Impact
+      </a>
+
+      <a class="navbar-item is-primary" href="/ethiopia/training">
+        Ethiopia 2019
+      </a>
       <a class="navbar-item is-primary" href="/donate">
         Donate
       </a>
 
-        <a class="navbar-item is-primary" href="/volunteer">
-        Volunteer
-       </a>
 
-       <a class="navbar-item is-primary">
+
+       <a class="navbar-item is-primary" href="/contact">
         Contact
        </a>
 
@@ -77,9 +78,6 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="MjQyNDA3YTEtNjJiZC00ZDlhLTk4M2QtYzUxNGUxZDA5NjMyNjM3MDUzNzc2OTkyOTAwNjUx
-" id="snipcart"></script>
 <script src="/public/js/app.js"></script>
 </body>
 </html>

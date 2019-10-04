@@ -54,4 +54,9 @@ class PageController(Controller):
     def donate(self, view: View):
         return view.render('donate')
 
+    def training(self, view: View):
+        return view.render('ethiopia-training')
+    def contact(self, view: View):
+        return view.render('contact.html')
+
 

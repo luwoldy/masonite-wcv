@@ -17,7 +17,7 @@ Different drivers you can use for storing file uploads.
 
 DRIVERS = {
     'disk': {
-        'location': 'storage/uploads'
+        'location': 'public/images'
     },
     's3': {
         'client': env('S3_CLIENT', 'AxJz...'),

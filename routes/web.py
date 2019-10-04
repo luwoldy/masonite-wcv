@@ -11,5 +11,7 @@ ROUTES = [
     Get('/volunteer', 'PageController@volunteer').name('volunteer'),
     Post('/volunteer/add', 'PageController@add_volunteer').name('volunteer.add'),
     Get('/donate', 'PageController@donate').name('donate'),
+    Get('/ethiopia/training', 'PageController@training').name('eth.training'),
+    Get('/contact','PageController@contact').name('contact')
 
 ]
