@@ -66,8 +66,22 @@
     </div>
   </div>
 </nav>
+                <h1 class="title has-background-link has-text-white has-text-centered">
+                  {{title}}
+                </h1>
+<div class="columns">
+  <div class="column is-one-fifth"></div>
 
-{% block content %}{% endblock %}
+  <div class="column">
+
+    {% block content %}{% endblock %}
+  </div>
+  <div class="column is-empty"></div>
+
+
+</div>
+
+
 <footer class="footer">
   <div class="content has-text-centered">
     <p>

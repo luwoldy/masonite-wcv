@@ -17,6 +17,30 @@ section {
   margin-bottom: 1em;
   margin-right: 1em;
 }
+
+@media screen and (min-width: 1024px) {
+  .v-center-desktop {
+   margin: 0 auto;
+   padding: 15px;
+   margin: 5px auto;
+  }
+  }
+
+p {
+
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+
+
+}
+p.legibility {
+  text-rendering: optimizeLegibility;
+}
+p.speed {
+  text-rendering: optimizeSpeed;
+}
+
 // Update Bulma's global variables
 $family-sans-serif: "Ubuntu", sans-serif;
 $grey-dark: $brown;

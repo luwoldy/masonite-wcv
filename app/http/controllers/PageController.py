@@ -32,7 +32,8 @@ class PageController(Controller):
         Returns:
             masonite.view.View -- The Masonite view class.
         """
-        return view.render('ethiopia')
+        title = '2019 Impact in Ethiopia'
+        return view.render('ethiopia',compact(title))
 
     def volunteer(self, view: View):
         """Show the welcome page.
@@ -55,7 +56,8 @@ class PageController(Controller):
         return view.render('donate')
 
     def training(self, view: View):
-        return view.render('ethiopia-training')
+        title='Creating a training program in Ethiopia '
+        return view.render('ethiopia-training',compact(title))
     def contact(self, view: View):
         return view.render('contact.html')
 
