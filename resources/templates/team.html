@@ -15,21 +15,15 @@
 
 {% for member in members %}
 	<div class="column is-one-third">
-	<div class="card">
-  <div class="card-image">
-    <figure class="image">
-      <img src="{{config('application').url}}/public/images/{{ member.image_url }}" alt="Placeholder image">
+    <figure class="image" >
+      <img src="{{config('application').url}}/public/images/{{ member.image_url }}" alt="{{member.full_name}} profile image" class="team_image">
     </figure>
-  </div>
-  <div class="card-content">
     <div class="media">
       <div class="media-content">
         <p class="title is-4">{{ member.full_name }}</p>
         <p class="subtitle is-6">{{ member.position }} at {{ member.company}}</p>
       </div>
     </div>
-  </div>
-</div>
 		</div>
 
 

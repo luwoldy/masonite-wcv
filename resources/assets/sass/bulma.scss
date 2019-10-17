@@ -34,6 +34,11 @@ p.speed {
   text-rendering: optimizeSpeed;
 }
 
+.team_image {
+  width: 256px !important;
+  height: 256px !important;
+}
+
 // Update Bulma's global variables
 $family-sans-serif: "Ubuntu", sans-serif;
 $grey-dark: $brown;
@@ -60,7 +65,13 @@ $input-shadow: none;
 
 
 @media screen and (min-width: 1024px) {
-  .v-center-desktop {
-   padding-top: 8em !important;
+  .v-center-desktop1 {
+   padding-top: 10em !important;
+  }
+  .v-center-desktop2 {
+   padding-top: 10.5em !important;
+  }
+  .v-center-desktop3 {
+   padding-top: 16em !important;
   }
   }
