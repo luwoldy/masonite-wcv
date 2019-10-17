@@ -28,6 +28,10 @@ p.speed {
   height: 256px !important;
 }
 
+.team {
+  padding: 4em;
+}
+
 @-webkit-keyframes spinAround {
   from {
     transform: rotate(0deg);
