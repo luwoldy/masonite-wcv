@@ -56,7 +56,7 @@ class PageController(Controller):
         return view.render('donate')
 
     def training(self, view: View):
-        title='Creating a training program in Ethiopia '
+        title='Training cardiac professionals in Ethiopia'
         return view.render('ethiopia-training',compact(title))
     def contact(self, view: View):
         return view.render('contact.html')
