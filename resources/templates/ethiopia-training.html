@@ -1,11 +1,13 @@
 {% extends 'two-columns.html' %}
 {%block content%}
+</div>
 
 
 <section>
+	<div class="content">
 	<img src="{{config('application').url}}/public/images/eth_map.svg" class="image" width="480px" height="480px">
 	<blockquote class="has-text-danger is-size-4">There are approximately 20 qualified cardiologists for over 100 million people in Ethiopia.</blockquote><br><br>
-	<div class="content">
+
 
 
 	<p>
@@ -22,7 +24,6 @@
 			Click the button below to make a contribution on our secure payment platform.</p>
 
       <a class="button is-primary" href="{{route('donate')}}">Donate</a>
-
 </div>
 </section>
 {%endblock%}
