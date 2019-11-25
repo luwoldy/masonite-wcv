@@ -58,7 +58,16 @@ class PageController(Controller):
     def training(self, view: View):
         title='Training cardiac professionals in Ethiopia'
         return view.render('ethiopia-training',compact(title))
+
     def contact(self, view: View):
         return view.render('contact.html')
+
+    def letter(self, view: View):
+        title='Letter from the director'
+        return view.render('letter-director.html',compact(title))
+
+    def overview(self, view: View):
+        title='World Cardiac Vision Cardiac Sonography Program Overview'
+        return view.render('overview.html',compact(title))
 
 
