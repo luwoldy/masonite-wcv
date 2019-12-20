@@ -32,6 +32,10 @@ p.speed {
   padding: 4em;
 }
 
+.icon {
+  padding-right: 1em !important;
+}
+
 @-webkit-keyframes spinAround {
   from {
     transform: rotate(0deg);
