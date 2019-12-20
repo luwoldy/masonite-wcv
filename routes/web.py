@@ -12,9 +12,12 @@ ROUTES = [
     Post('/volunteer/add', 'PageController@add_volunteer').name('volunteer.add'),
     Get('/donate', 'PageController@donate').name('donate'),
     Get('/ethiopia/training', 'PageController@training').name('eth.training'),
-    Get('/contact','PageController@contact').name('contact'),
-    Get('/letter','PageController@letter').name('letter').middleware('auth'),
-    Get('/overview','PageController@overview').name('overview').middleware('auth'),
+    Get('/contact', 'PageController@contact').name('contact'),
+    Get('/letter', 'PageController@letter').name('letter').middleware('auth'),
+    Get('/overview', 'PageController@overview').name('overview').middleware('auth'),
+    # Get('/strapi', 'PageController@strapi').name('strapi'),
+    Get('/fetal-echocardiography', 'PageController@fe').name('article.fe'),
+
 
 
 ]
@@ -31,6 +34,7 @@ ROUTES = ROUTES + [
     Get().route('/email/verify/@id:signed', 'ConfirmController@confirm_email'),
     Get().route('/password', 'PasswordController@forget').name('forgot.password'),
     Post().route('/password', 'PasswordController@send'),
-    Get().route('/password/@token/reset', 'PasswordController@reset').name('password.reset'),
+    Get().route('/password/@token/reset',
+                'PasswordController@reset').name('password.reset'),
     Post().route('/password/@token/reset', 'PasswordController@update'),
 ]

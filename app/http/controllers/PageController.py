@@ -7,6 +7,7 @@ from app.notifications.VolunteerNotification import VolunteerNotification
 from notifications import Notify
 from masonite.helpers import compact
 
+
 class PageController(Controller):
     """Controller For Welcoming The User."""
 
@@ -33,7 +34,7 @@ class PageController(Controller):
             masonite.view.View -- The Masonite view class.
         """
         title = '2019 Impact in Ethiopia'
-        return view.render('ethiopia',compact(title))
+        return view.render('ethiopia', compact(title))
 
     def volunteer(self, view: View):
         """Show the welcome page.
@@ -47,27 +48,34 @@ class PageController(Controller):
         """
         return view.render('volunteer')
 
-    def add_volunteer(self, notify: Notify,view: View, request: Request):
+    def add_volunteer(self, notify: Notify, view: View, request: Request):
         team_member = request.input('full_name')
-        notify.mail(VolunteerNotification, to='leul.woldeab@gmail.com', name=team_member)
-        return view.render('form_success',compact(team_member))
+        notify.mail(VolunteerNotification,
+                    to='leul.woldeab@gmail.com', name=team_member)
+        return view.render('form_success', compact(team_member))
 
     def donate(self, view: View):
         return view.render('donate')
 
     def training(self, view: View):
-        title='Training cardiac professionals in Ethiopia'
-        return view.render('ethiopia-training',compact(title))
+        title = 'Training cardiac professionals in Ethiopia'
+        return view.render('ethiopia-training', compact(title))
 
     def contact(self, view: View):
         return view.render('contact.html')
 
     def letter(self, view: View):
-        title='Letter from the director'
-        return view.render('letter-director.html',compact(title))
+        title = 'Letter from the director'
+        return view.render('letter-director.html', compact(title))
 
     def overview(self, view: View):
-        title='World Cardiac Vision Cardiac Sonography Program Overview'
-        return view.render('overview.html',compact(title))
+        title = 'World Cardiac Vision Cardiac Sonography Program Overview'
+        return view.render('overview.html', compact(title))
 
+    # def strapi(self, view: View):
+    #     title = 'Strapi playground'
+    #     return view.render('strapi.html', compact(title))
 
+    def fe(self, view: View):
+        title = 'Fetal Echocardiography'
+        return view.render('echo-cardio.html', compact(title))
